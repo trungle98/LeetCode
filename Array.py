@@ -48,3 +48,15 @@ def generate(self, numRows):
                 newRow[j] = pre_row[j-1]+pre_row[j]
             ans.append(newRow)
         return ans
+
+#https://leetcode.com/problems/build-array-from-permutation/?envType=problem-list-v2&envId=array
+#1920. Build Array from Permutation
+def buildArray(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        ans = []
+        for i in nums:
+            ans.append(nums[i])
+        return ans
