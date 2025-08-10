@@ -27,3 +27,24 @@ def maxProfit(prices):
                     ans = diff
 
         return ans
+
+#https://leetcode.com/problems/pascals-triangle/?envType=problem-list-v2&envId=array
+#118. Pascal's Triangle
+def generate(self, numRows):
+        """
+        :type numRows: int
+        :rtype: List[List[int]]
+        """
+        ans = [[1]]
+        if numRows == 1:
+            return ans
+        ans.append([1,1])
+        if numRows == 2:
+            return ans
+        for i in range(2, numRows):
+            newRow = [1]*(i+1)
+            for j in range(1,len(newRow)-1):
+                pre_row = ans[i-1]
+                newRow[j] = pre_row[j-1]+pre_row[j]
+            ans.append(newRow)
+        return ans
