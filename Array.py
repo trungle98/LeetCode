@@ -60,3 +60,19 @@ def buildArray(self, nums):
         for i in nums:
             ans.append(nums[i])
         return ans
+
+
+#https://leetcode.com/problems/find-words-containing-character/?envType=problem-list-v2&envId=array
+#2942. Find Words Containing a Character
+def findWordsContaining(self, words, x):
+        """
+        :type words: List[str]
+        :type x: str
+        :rtype: List[int]
+        """
+        ans = []
+        for i in range(len(words)):
+            w = words[i]
+            if x in w:
+                ans.append(i)
+        return ans
